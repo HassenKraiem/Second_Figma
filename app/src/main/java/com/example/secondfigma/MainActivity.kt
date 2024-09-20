@@ -102,10 +102,12 @@ fun UpView(modifier: Modifier = Modifier) {
             }
         }
         Text(
-            text = "أذكار الصباح",
+            text = ".أذكار الصباح",
             fontSize = 25.sp, modifier = Modifier.fillMaxWidth(0.5f),
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily(Font(R.font.cairobold))
+
+
         )
     }
 
