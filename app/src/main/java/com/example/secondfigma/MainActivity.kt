@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContentPadding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
@@ -127,7 +128,7 @@ fun DownView(modifier: Modifier = Modifier) {
     ) {
         Button(
             onClick = {
-                if (pageNumber in (1 .. 7)) {
+                if (pageNumber in (1..7)) {
                     pageNumber--
                 }
             }, colors = ButtonColors(
@@ -135,31 +136,37 @@ fun DownView(modifier: Modifier = Modifier) {
                 containerColor = Color.White,
                 disabledContentColor = Color.Yellow,
                 disabledContainerColor = Color.Red
-            ), modifier = Modifier.fillMaxWidth(0.17f),
-            border = BorderStroke(2.dp, Color.Black)
+            ), modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+            border = BorderStroke(2.dp, Color.Black),
+            shape = RoundedCornerShape(25f)
         ) {
             Image(
                 painter = painterResource(R.drawable.arrow___left),
                 contentDescription = null,
                 contentScale = ContentScale.Fit,
-                modifier = Modifier.fillMaxWidth(1f)
+                modifier = Modifier.fillMaxWidth()
             )
         }
 
         Button(
-            onClick = {}, colors = ButtonColors(
+            onClick = {},
+            colors = ButtonColors(
                 containerColor = colorResource(R.color.Asfar),
                 contentColor = Color.Black,
                 disabledContainerColor = Color.Black,
                 disabledContentColor = Color.Black
             ),
-            border = BorderStroke(2.dp, Color.Black)
+            border = BorderStroke(2.dp, Color.Black),
+            shape = RoundedCornerShape(25f),
+            modifier = Modifier.padding(horizontal = 55.dp)
         )
 
         {
             Text(
                 text = "$pageNumber/7",
-                fontFamily = FontFamily (Font(R.font.cairobold))
+                fontFamily = FontFamily(Font(R.font.cairobold))
             )
 
         }
@@ -173,8 +180,11 @@ fun DownView(modifier: Modifier = Modifier) {
                 containerColor = Color.White,
                 disabledContentColor = Color.Yellow,
                 disabledContainerColor = Color.Red
-            ), modifier = Modifier.fillMaxWidth(0.25f),
-            border = BorderStroke(2.dp, Color.Black)
+            ), modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+            border = BorderStroke(2.dp, Color.Black),
+            shape = RoundedCornerShape(25f)
         ) {
             Image(
                 painter = painterResource(R.drawable.arrow___right),
@@ -191,7 +201,9 @@ fun DownView(modifier: Modifier = Modifier) {
 
 @Composable
 fun AllViews(modifier: Modifier = Modifier) {
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(modifier = modifier
+        .fillMaxSize()
+        .padding(20.dp)) {
         Image(
             painter = painterResource(R.drawable.group_580),
             contentDescription = null,
