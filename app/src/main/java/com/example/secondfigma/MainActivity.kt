@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -157,11 +158,11 @@ fun DownView(modifier: Modifier = Modifier) {
         Box {
             Card(
                 modifier = Modifier
-                    .padding(5.dp)
+                    .offset(x=-5.dp, y = 2.dp)
                     .width(60.dp)
                     .height(60.dp),
                 shape = RoundedCornerShape(25.dp),
-                border = BorderStroke(1.dp, color = colorResource(R.color.Asfar)),
+                border = BorderStroke(1.dp, color = Color.Black),
                 colors = CardColors(
                     containerColor = Color.Black,
                     contentColor = colorResource(R.color.black),
